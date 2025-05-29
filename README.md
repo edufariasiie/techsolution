@@ -66,7 +66,7 @@ O TechSolution é uma plataforma que conecta estudantes a membros da comunidade 
 
 1. **Clonar o Repositório:**
    ```bash
-   git clone https://github.com/usuario/techsolution-v4.git
+   git clone https://github.com/edufariasiie/techsolution.git
    ```
 
 2. **Instalar Dependências:**
