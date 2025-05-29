@@ -2,7 +2,7 @@
 
 ## Status do Projeto
 
-[=----------------]
+[==---------------]
 
 O projeto está atualmente em 5% de conclusão.
 
@@ -34,19 +34,33 @@ O TechSolution é uma plataforma que conecta estudantes a membros da comunidade 
 - **Backend:** PHP
 - **Banco de Dados:** MySQL
 - **Frontend:** HTML, CSS, JavaScript
-- **Segurança:** Bcrypt para hash de senhas, autenticação baseada em sessões
+- **Segurança:** Bcrypt para hash de senhas, autenticação baseada em sessões, uso de prepared statements (SQL seguro), validação e sanitização de dados, páginas sensíveis protegidas por autenticação.
+
+### O que cada item de segurança significa?
+
+- **Bcrypt para hash de senhas:** As senhas dos usuários não são salvas em texto puro, mas sim embaralhadas com um algoritmo seguro. Assim, mesmo que alguém acesse o banco, não verá as senhas reais.
+- **Autenticação baseada em sessões:** Após o login, o usuário recebe uma sessão única, que garante que só ele pode acessar áreas restritas enquanto estiver logado.
+- **Prepared statements (SQL seguro):** As consultas ao banco de dados são feitas de forma que comandos maliciosos não funcionam, protegendo contra ataques de SQL Injection.
+- **Validação e sanitização de dados:** Todos os dados enviados pelos usuários são checados e limpos antes de serem usados, evitando erros e ataques como XSS.
+- **Páginas sensíveis protegidas por autenticação:** Só usuários logados conseguem acessar áreas importantes do sistema, como dashboards e cadastro de projetos.
 
 ## Estrutura do Banco de Dados
 
 ### Tabelas principais:
-- **usuarios:** Dados do usuário (id, nome, periodo, especialidades, plano, data_assinatura, role)
-- **projetos:** Detalhes do projeto (id, titulo, descricao, publicado_por, recompensa, recompensa_por, data_publicacao)
+- **users:** Dados do usuário (id, username, email, password, role, business_name, business_type, created_at)
+- **projetos:** Detalhes do projeto (id, nome, descricao, data_limite, tipo_incentivo, valor_financeiro, descricao_permuta, user_id, criado_em)
 - **projetos_aceitos:** Projetos aceitos (id, projeto_id, usuario_id, grupo_id, status, data_aceitacao)
 - **grupos:** Informações do grupo (id, nome_grupo, especialidades, criador_id)
 - **grupo_membros:** Membros do grupo (id, grupo_id, usuario_id)
 - **feedback:** Dados de feedback (id, projeto_id, usuario_id, grupo_id, feedback, estrelas)
 - **badges & usuario_badges:** Definições e atribuições de badges
 - **pontuacao:** Pontuações para rankings
+
+## Estrutura de Pastas
+
+- `public/comunidade/`: Páginas e componentes da área da comunidade
+- `public/auth/`: Páginas de autenticação (login, registro)
+- `functions/comuFunctions/`: Funções específicas da comunidade (ex: cadastro de projetos)
 
 ## Instruções de Configuração
 
