@@ -2,9 +2,9 @@
 
 ## Status do Projeto
 
-[==---------------]
+[==------------------]
 
-O projeto está atualmente em 5% de conclusão.
+O projeto está atualmente em 10% de conclusão.
 
 ## Visão Geral
 
