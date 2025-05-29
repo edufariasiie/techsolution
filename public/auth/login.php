@@ -102,7 +102,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 </a>
               </div>
               <!-- /Logo -->
-              <h4 class="mb-2">Bem-vindo ao Sneat! 👋</h4>
+              <h4 class="mb-2">Bem-vindo ao TechSolution! 👋</h4>
               <p class="mb-4">Por favor, faça login na sua conta e comece a aventura</p>
 
               <form id="formAuthentication" class="mb-3" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
@@ -151,7 +151,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
               <p class="text-center">
                 <span>Novo na nossa plataforma?</span>
-                <a href="auth-register-basic.html">
+                <a href="register.php">
                   <span>Crie uma conta</span>
                 </a>
               </p>
@@ -164,14 +164,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     <!-- / Content -->
 
-    <div class="buy-now">
-      <a
-        href="https://themeselection.com/products/sneat-bootstrap-html-admin-template/"
-        target="_blank"
-        class="btn btn-danger btn-buy-now"
-        >Upgrade to Pro</a
-      >
-    </div>
+
 
     <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->
