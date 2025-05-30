@@ -174,7 +174,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
               </div>
               <!-- /Logo -->
               <h4 class="mb-2">Crie sua conta 🚀</h4>
-              <p class="mb-4">Preencha os dados para se cadastrar como Membro da Comunidade.</p>
+              <p class="mb-4">Preencha os dados para se cadastrar.</p>
 
               <form id="formAuthentication" class="mb-3" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
                 <div class="mb-3">
